@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>Edit</title>
+</head>
+<body>
+<form action="#" th:action="@{/edit}" th:object="${user}" th:method="POST">
+    <input type="hidden" th:field="*{id}" th:value="*{id}"/>
+    <p>Name: <input type="text" th:field="*{name}" th:value="*{name}" th:charset="utf-8"/></p>
+    <p>LastName: <input type="text" th:field="*{lastName}" th:value="*{lastName}"/></p>
+    <p>Age: <input type="text" th:field="*{age}" th:value="*{age}" th:charset="utf-8"/></p>
+    <p><input type="submit" value="Edit"/></p>
+</form>
+</body>
+</html>

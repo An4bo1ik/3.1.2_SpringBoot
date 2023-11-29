@@ -23,8 +23,9 @@
                 <td th:text="${user.age}"></td>
                 <td>
                     <a th:href="@{/edit(id=${user.id})}" th:text="Edit"></a>
-                    <form th:action="@{/delete/(id=${user.id})}" th:method="post">
-                        <button type='submit' name='your_name' value='your_value' class='btn-link'>Delete</button>
+                    <form th:action="@{/delete}" th:method="post">
+                        <input type="hidden" name="id" th:value="${user.id}" />
+                        <button type='submit' >Delete</button>
                     </form>
                 </td>
             </tr>
